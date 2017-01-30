@@ -7,5 +7,6 @@ target 'Google Sign In Example Project' do
 
   # Pods for Google Sign In Example Project
   pod ‘Firebase/Core’
+  pod ‘GoogleSignIn’
 
 end
