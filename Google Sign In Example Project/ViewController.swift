@@ -9,12 +9,15 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import GoogleSignIn
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
     }
 
     override func didReceiveMemoryWarning() {
